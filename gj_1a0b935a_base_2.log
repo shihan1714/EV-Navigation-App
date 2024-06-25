@@ -1,0 +1,61 @@
+--- Job gj_1a0b935a_base_2.gms Start 06/24/24 22:48:10 44.3.0 8b8fb1cb WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\44\gmsprmNT.txt
+--- GAMS Parameters defined
+    LP CPLEX
+    MIP CPLEX
+    RMIP CPLEX
+    NLP CONOPT
+    MCP PATH
+    MPEC NLPEC
+    RMPEC NLPEC
+    CNS CONOPT
+    DNLP CONOPT
+    RMINLP CONOPT
+    MINLP DICOPT
+    QCP CONOPT
+    MIQCP SBB
+    RMIQCP CONOPT
+    EMP JAMS
+    Restart "c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\gj_1a0b935a_base_cp.g00"
+    Input "c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\gj_1a0b935a_base_2.gms"
+    Output "c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\gj_1a0b935a_base_2.lst"
+    Save "c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\gj_1a0b935a_base_cpnew.g00"
+    ScrDir "c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\225a\"
+    SysDir C:\GAMS\44\
+    CurDir "c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\"
+    LogOption 4
+    LogFile "c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\gj_1a0b935a_base_2.log"
+    Trace "c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\gj_1a0b935a_base_2.trc"
+    Reference "c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\gj_1a0b935a_base_2.ref"
+    TraceOpt 3
+    GDX "c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\gj_1a0b935a_base_2_gdxout.gdx"
+Licensee: GAMS Community License for Andrew Shih         G240624|0002AO-GEN
+          University of Wisconsin-Madison, Computer Sciences Dept.  CL16368
+          C:\Users\shiha\OneDrive\Documents\GAMS\gamslice.txt
+          Andrew Shih, ashih2@wisc.edu                                     
+          Community license for demonstration and instructional purposes only
+Processor information: 1 socket(s), 4 core(s), and 8 thread(s) available
+GAMS 44.3.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting continued compilation
+--- Workfile was generated under GAMS version WEX443-443
+--- gj_1a0b935a_base_2.gms(1) 2 Mb
+--- GDXin=c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\gj_1a0b935a_base_2_gdxin.gdx
+--- GDX File ($gdxIn) c:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\gj_1a0b935a_base_2_gdxin.gdx
+--- gj_1a0b935a_base_2.gms(47) 8 Mb
+--- Starting execution: elapsed 0:00:00.267
+--- gj_1a0b935a_base_2.gms(15) 11 Mb
+--- Generating LP model short1
+--- gj_1a0b935a_base_2.gms(35) 44 Mb
+---   1,802 rows  125,891 columns  377,671 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+--- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.081E-04, 2.280E+02]
+*** The model exceeds the community license limits for linear models of more than 5000 rows or columns
+    As an academic user, you can submit large models to the NEOS service for free (see https://www.gams.com/neos)
+    Alternatively, feel free to contact sales@gams.com to discuss your options
+*** Status: Terminated due to a licensing error
+***         License file: C:\Users\shiha\OneDrive\Documents\GAMS\gamslice.txt
+***         Inspect listing file for more information.
+--- Job gj_1a0b935a_base_2.gms Stop 06/24/24 22:48:13 elapsed 0:00:03.277
