@@ -1,0 +1,14 @@
+B 3 C o m p i l a t i o n
+B 11 Range Statistics    SOLVE short1 Using LP From line 34
+B 22 Model Statistics    SOLVE short1 Using LP From line 34
+B 35 Solution Report     SOLVE short1 Using LP From line 34
+F 67 balance
+F 676 objective
+G 680 totalDistance
+G 682 x
+B 40227 E x e c u t i o n
+I 40227 x
+I 40241 totalDistance
+I 40242 distances
+I 51201 arcs
+I 62160 usedArcs

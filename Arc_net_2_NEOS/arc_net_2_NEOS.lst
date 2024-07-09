@@ -1,0 +1,75 @@
+GAMS 47.1.0  55516beb Jun 13, 2024          WEX-WEI x86 64bit/MS Windows - 07/08/24 21:00:20 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+GDXIN   C:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\Arc_net_2_NEOS\data_gdx.gdx
+   3  set nodes(*) 'nodes';
+--- LOAD  nodes = 1:nodes
+   5  parameter distances(nodes,nodes) '';
+--- LOAD  distances = 2:distances
+  10  alias(i, j, nodes)
+  11  parameter supply(nodes) /29041 1, 17191 -1/;
+  12   
+  13  set arcs(nodes, nodes);
+  14  arcs(i,j) = distances(i,j) > 0;
+  15  * Variables for the optimization problem
+  16  * Variable for total distance
+  17  variables totalDistance;
+  18  * Flow variables for each arc
+  19  positive variables x(nodes,nodes) flow;
+  20   
+  21  * Equations for constraints and objective
+  22  equations balance(nodes), objective;
+  23   
+  24  * Balance equation for flow conservation
+  25  balance(nodes)..
+  26      sum(arcs(nodes,j), x(nodes,j)) - sum(arcs(i,nodes), x(i,nodes)) =e= supply(nodes);
+  27   
+  28  * Objective function for total distance minimization
+  29  objective..
+  30      totalDistance =e= sum(arcs, distances(arcs) * x(arcs));
+  31   
+  32  * Model definition
+  33  model short1 / balance, objective /;
+  34  solve short1 minimizing totalDistance using lp;
+  35   
+  36  option x:5:0:2;
+  37  display x.l, totalDistance.l, distances;
+  38  display arcs;
+  39   
+  40  * Define a set to hold the used arcs
+  41  set usedArcs(nodes, nodes);
+  42   
+  43  * Populate the set with arcs that have positive flow in the solution
+  44  usedArcs(i,j)$(x.l(i,j) > 0) = yes;
+  45   
+  46  * Display the used arcs
+  47  display usedArcs;
+GAMS 47.1.0  55516beb Jun 13, 2024          WEX-WEI x86 64bit/MS Windows - 07/08/24 21:00:20 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  C:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\Arc_net_2_NEOS\arc_net_2_NEOS.gms
+     2        1 GDXIN          1       1  C:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\Arc_net_2_NEOS\data_gdx.gdx
+
+
+COMPILATION TIME     =        0.031 SECONDS      4 MB  47.1.0 55516beb WEX-WEI
+
+
+USER: GAMS Community License for Andrew Shih         G240624|0002AO-GEN
+      University of Wisconsin-Madison, Computer Sciences Dept.  CL16368
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\Arc_net_2_NEOS\arc_net_2_NEOS.gms
+Output     C:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\Arc_net_2_NEOS\arc_net_2_NEOS.lst
+XSave      C:\Users\shiha\OneDrive\Documents\Materials - Personal\VS Code Personal Projects\EV-Navigation-App\Arc_net_2_NEOS\arc_net_2_NEOS.g0?
+
+**** WARNING - COMPILER OPTIONS ARE NON DEFAULT     ONEMPTY
+     EOLCOM # 

@@ -1,0 +1,75 @@
+--- Job MODEL.gms Start 07/08/24 21:00:31 46.5.0 a671108d LEX-LEG x86 64bit/Linux
+--- Applying:
+--- GAMS Parameters defined
+    Restart /var/lib/condor/execute/dir_656286/gamsexec/restart.g00
+    Input /var/lib/condor/execute/dir_656286/gamsexec/MODEL.gms
+    Output /var/lib/condor/execute/dir_656286/gamsexec/solve.lst
+    PageWidth 79
+    PageSize 0
+    ScrDir /var/lib/condor/execute/dir_656286/neos-656288/
+    SysDir /opt/gams/46.5.0/
+    CurDir /var/lib/condor/execute/dir_656286/gamsexec/
+    LogOption 4
+    LogFile /var/lib/condor/execute/dir_656286/gamsexec/solve.log
+    AppendOut 1
+    AppendLog 0
+    Suppress 0
+    CErr 10
+    ErrMsg 1
+    ErrorLog 99
+    LimRow 0
+    LimCol 0
+    IDE 1
+    GDX /var/lib/condor/execute/dir_656286/gamsexec/out.gdx
+    ExecMode 3
+    gdxCompress 1
+    Solver cbc
+    LstTitleLeftAligned 1
+Licensee: NEOS Server License prod-exec-6.neos-server.orgS231116/0001AB-GEN
+          mac@d0:94:66:89:89:0f                                     DCE1890
+          /opt/gams/46.5.0/gamslice.txt
+          Evaluation license: Not for commercial or production use
+          The evaluation period of the license will expire on Dec 10, 2024
+Processor information: 2 socket(s), 36 core(s), and 72 thread(s) available
+GAMS 46.5.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
+--- Starting continued compilation
+--- Workfile was generated under GAMS version WEX430-430
+--- MODEL.gms(4) 4 Mb[FIL:"/var/lib/condor/execute/dir_656286/gamsexec/MODEL.gms",4,0]
+--- Starting execution: elapsed 0:00:00.022[LST:10]
+--- MODEL.gms(14) 6 Mb[FIL:"/var/lib/condor/execute/dir_656286/gamsexec/MODEL.gms",14,0]
+--- Generating LP model short1[LST:10]
+--- MODEL.gms(34) 16 Mb[FIL:"/var/lib/condor/execute/dir_656286/gamsexec/MODEL.gms",34,0]
+---   603 rows  39,535 columns  118,603 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+--- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+--- Matrix    [min, max] : [ 6.727E-03, 4.490E+02]
+--- Executing CBC (Solvelink=2): elapsed 0:00:00.121[LST:22]
+
+COIN-OR CBC      46.5.0 a671108d May 8, 2024           LEG x86 64bit/Linux    
+
+COIN-OR Branch and Cut (CBC Library 2.10.11)
+written by J. Forrest
+
+Parallel mode: none, using 72 threads in linear algebra
+
+Calling CBC main solution routine...
+0  Obj 0 Primal inf 1.9999998 (2)
+67  Obj 340.36807 Primal inf 1.9999998 (2)
+137  Obj 759.36493 Primal inf 1.9999998 (2)
+212  Obj 1219.1432 Primal inf 1.9999998 (2)
+297  Obj 2135.5937 Primal inf 1.9999998 (2)
+384  Obj 3314.3998 Primal inf 1.9999998 (2)
+470  Obj 3896.4253 Primal inf 1.9999998 (2)
+557  Obj 4626.1842 Primal inf 1.9999998 (2)
+601  Obj 4996.5645
+Optimal - objective value 4996.5645
+Optimal objective 4996.564468 - 601 iterations time 0.102
+
+Solved to optimality.
+--- Reading solution for model short1[LST:34]
+--- Executing after solve: elapsed 0:00:00.468[LST:40226]
+--- MODEL.gms(47) 16 Mb[FIL:"/var/lib/condor/execute/dir_656286/gamsexec/MODEL.gms",47,0]
+--- GDX File /var/lib/condor/execute/dir_656286/gamsexec/out.gdx[FIL:"/var/lib/condor/execute/dir_656286/gamsexec/out.gdx",0,0]
+*** Status: Normal completion[LST:62203]
+--- Job MODEL.gms Stop 07/08/24 21:00:32 elapsed 0:00:00.838
